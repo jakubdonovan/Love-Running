@@ -1,4 +1,220 @@
-body
-    font-family: monospace
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap')
 
-    
+body
+    margin: 0
+    padding: 0
+    border: 0
+    font-family: Lato
+    color: #777777
+
+
+/* --------- Navbar --------- */
+#navbar
+    display: grid
+    grid-template: 60px / auto 1fr
+    grid-template-areas: "logo nav"
+    background-color: whitesmoke
+
+    #navbar-logo
+        grid-area: logo
+        color: #525252
+        font-family: Oswald
+        font-size: 35px
+        text-transform: uppercase
+        letter-spacing: 4px
+        text-decoration: none
+        text-align: center
+        margin: auto 20px
+
+    nav
+        grid-area: nav
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin: 20px
+        text-decoration: none
+
+        ul
+            display: flex
+            justify-content: flex-end
+            list-style-type: none
+            letter-spacing: 4px
+            font-family: Oswald
+            font-size: 1rem
+            font-weight: 700
+            text-align: left
+
+            li
+                margin: 20px
+
+                a
+                    text-decoration: none
+                    color: inherit
+
+                a:hover
+                    border-bottom: 1px solid #777777
+
+                .active
+                    border-bottom: 1px solid #777777
+
+
+/* --------- Hero --------- */
+#hero-outer
+    height: 600px
+    width: 100%
+    overflow: hidden
+    position: relative
+
+#hero-image
+    height: 600px
+    width: 100%
+    background: url("static/img/three-runners.png") no-repeat center
+    background-size: cover
+
+    animation-name: hero-zoom
+    animation-duration: 5s
+    animation-fill-mode: forwards
+
+@keyframes hero-zoom
+    from
+        transform: scale(1)
+        
+    to
+        transform: scale(1.1)
+
+#cover-text, #cover-text h2
+    color: white
+
+#cover-text
+    font-size: 130%
+    font-family: Oswald
+    text-transform: uppercase
+    letter-spacing: 4px
+
+    width: 300px
+    height: 200px
+
+    padding-top: 40px
+    padding-left: 10px
+
+    background-color: rgba(241, 109, 107, .7)
+    bottom: 30px
+    right: 150px
+
+    position: absolute
+
+
+/* --------- Ethos --------- */
+#club-ethos
+    height: 600px
+
+    #welcome
+        text-align: center
+        margin: 20px 0
+        font-size: 280%
+
+    hr
+        border: 1px solid #777777
+        width: 100%
+        margin: 5px 0
+
+    #left-about
+        padding-top: 30px
+        width: 33%
+        float: left
+
+        .left-about-heading
+            width: 50%
+            float: right
+            line-height: 20px
+            clear: both
+            margin-bottom: 50px
+
+            h2
+                text-align: left
+
+            p
+                text-align: left
+
+
+    #right-about
+        padding-top: 30px
+        width: 33%
+        float: right
+
+        .right-about-heading
+            width: 50%
+            float: left
+            line-height: 20px
+            clear: both
+            margin-bottom: 50px
+
+            h2
+                text-align: right
+            
+            p
+                text-align: right
+
+    #center-about
+        width: 33%
+        margin: 0 auto
+
+        #circle-container
+            width: 300px
+            height: 300px
+            padding: 30px
+            border: 1px solid lightgrey
+            border-radius: 50%
+            margin: 0 auto
+
+            #circle-cover-bg
+                background: url("static/img/runner.png") no-repeat center
+                height: 100%
+                border-radius: 50%
+
+
+/* --------- Meeting Times --------- */
+#meeting-times
+    width: 100%
+    display: grid
+    grid-template: auto / repeat(auto-fit, minmax(200px, 1fr))
+    grid-gap: 10px
+
+    background: url("static/img/dublin-city.png") no-repeat center
+    background-size: cover
+    overflow: hidden
+
+    .meeting-card
+        height: 300px
+        color: white
+        background-color: black
+        opacity: 0.6
+        
+        text-align: center
+
+        h2
+            color: white
+
+
+/* --------- Footer --------- */
+
+footer
+    display: grid
+    grid-template: 50px / 1fr
+
+    background-color: whitesmoke
+    opacity: 0.8
+
+    .social-networks
+        display: flex
+        justify-content: center
+        text-align: center
+        
+
+        li
+            list-style-type: none
+            margin-right: 5%
+            
+            i
+                font-size: 160%
+                color: #777777
