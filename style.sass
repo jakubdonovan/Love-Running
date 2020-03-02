@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap')
 
 body
-    height: 100%
+    height: 100vh
     width: 100%
     margin: 0
     padding: 0
@@ -146,7 +146,7 @@ body
         display: flex
         flex-direction: column
         text-align: right
-        justify-self: left
+        justify-self: start
 
         .right-about-heading
             min-width: 290px
@@ -194,7 +194,7 @@ body
 
 /* --------- Meeting Times --------- */
 #meeting-times
-    width: 100%
+
     display: grid
     grid-template: auto / repeat(auto-fit, minmax(200px, 1fr))
     grid-gap: 10px
@@ -220,6 +220,9 @@ body
 footer
     display: grid
     grid-template: 50px / 1fr
+    position: absolute
+    width: 100%
+    bottom: 0
 
     background-color: whitesmoke
     opacity: 0.8
@@ -249,7 +252,7 @@ footer
 #gallery
     display: grid
     grid-template-columns: repeat(10, 1fr)
-    grid-auto-rows: repeat(auto-fill, minmax(150px, 1fr))
+    grid-auto-rows: repeat(10, 1fr)
     grid-gap: 5px
     background-color: whitesmoke
 
@@ -288,6 +291,5 @@ footer
 
     .eight
         grid-area: 4/8/5/9
-    
 
     
