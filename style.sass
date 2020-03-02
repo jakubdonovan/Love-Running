@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap')
 
 body
+    height: 100%
+    width: 100%
     margin: 0
     padding: 0
     border: 0
     font-family: Lato
     color: #777777
-    height: 100%
 
 
 /* --------- Navbar --------- */
@@ -217,10 +218,6 @@ body
 /* --------- Footer --------- */
 
 footer
-    position: absolute
-    bottom: 0
-    width: 100%
-
     display: grid
     grid-template: 50px / 1fr
 
@@ -242,28 +239,32 @@ footer
                 color: #777777
 
     
-    
-    
 // GALLERY.html
 /* --------- Meeting Times --------- */
 #content
     padding: 20px
     margin: 10px
-    min-height: 100%
 
 
 #gallery
     display: grid
     grid-template-columns: repeat(10, 1fr)
     grid-auto-rows: repeat(auto-fill, minmax(150px, 1fr))
-    grid-gap: 10px
+    grid-gap: 5px
     background-color: whitesmoke
 
     .gallery-item
         background-size: cover
         width: 100%
         height: 100%
-    
+
+    .gallery-item:hover
+        transform: scale(1.04) 
+        transition: 1s
+        border: 3px solid gold
+        border-radius: 1%
+        
+
     .one
         grid-area: 1/1/2/4
 
