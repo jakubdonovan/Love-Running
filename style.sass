@@ -8,6 +8,7 @@ body
     color: #777777
 
 
+
 /* --------- Navbar --------- */
 #navbar
     display: grid
@@ -104,11 +105,87 @@ body
     position: absolute
 
 
-/* --------- Ethos --------- */
+// /* --------- Club Ethos --------- */
+// #club-ethos
+//     height: 600px
+
+//     #welcome
+//         text-align: center
+//         margin: 20px 0
+//         font-size: 280%
+
+//     hr
+//         border: 1px solid #777777
+//         width: 100%
+//         margin: 5px 0
+
+//     #left-about
+//         padding-top: 30px
+//         width: 33%
+//         float: left
+
+//         .left-about-heading
+//             width: 50%
+//             float: right
+//             line-height: 20px
+//             clear: both
+//             margin-bottom: 50px
+
+//             h2
+//                 text-align: left
+
+//             p
+//                 text-align: left
+
+
+//     #right-about
+//         padding-top: 30px
+//         width: 33%
+//         float: right
+
+//         .right-about-heading
+//             width: 50%
+//             float: left
+//             line-height: 20px
+//             clear: both
+//             margin-bottom: 50px
+
+//             h2
+//                 text-align: right
+            
+//             p
+//                 text-align: right
+
+//     #center-about
+//         width: 33%
+//         margin: 0 auto
+
+//         #circle-container
+//             width: 300px
+//             height: 300px
+//             padding: 30px
+//             border: 1px solid lightgrey
+//             border-radius: 50%
+//             margin: 0 auto
+
+//             #circle-cover-bg
+//                 background: url("static/img/runner.png") no-repeat center
+//                 height: 100%
+//                 border-radius: 50%
+
+
+/* --------- Club Ethos --------- */
 #club-ethos
-    height: 600px
+    display: grid
+    grid-template: auto / repeat(auto-fit, minmax(320px, 1fr))
+    grid-template-areas: "welcome welcome welcome" "left-about center right-about"
+    grid-gap: 30px
+    padding-bottom: 50px
+    overflow: hidden
+    
 
     #welcome
+        grid-area: welcome
         text-align: center
         margin: 20px 0
         font-size: 280%
@@ -118,46 +195,33 @@ body
         width: 100%
         margin: 5px 0
 
+
     #left-about
-        padding-top: 30px
-        width: 33%
-        float: left
+        grid-area: left-about
+        width: 60%
+        display: flex
+        flex-direction: column
+        text-align: left
+        justify-self: end
 
         .left-about-heading
-            width: 50%
-            float: right
-            line-height: 20px
-            clear: both
-            margin-bottom: 50px
-
-            h2
-                text-align: left
-
-            p
-                text-align: left
+            min-width: 290px
 
 
     #right-about
-        padding-top: 30px
-        width: 33%
-        float: right
+        grid-area: right-about
+        width: 60%
+        display: flex
+        flex-direction: column
+        text-align: right
+        justify-self: left
 
         .right-about-heading
-            width: 50%
-            float: left
-            line-height: 20px
-            clear: both
-            margin-bottom: 50px
+            min-width: 290px
 
-            h2
-                text-align: right
-            
-            p
-                text-align: right
 
     #center-about
-        width: 33%
-        margin: 0 auto
+        grid-area: center
 
         #circle-container
             width: 300px
@@ -172,6 +236,7 @@ body
                 height: 100%
                 border-radius: 50%
 
+    
 
 /* --------- Meeting Times --------- */
 #meeting-times

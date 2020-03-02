@@ -14,7 +14,6 @@ body {
   grid-template-areas: "logo nav";
   background-color: whitesmoke;
 }
-
 #navbar #navbar-logo {
   grid-area: logo;
   color: #525252;
@@ -26,7 +25,6 @@ body {
   text-align: center;
   margin: auto 20px;
 }
-
 #navbar nav {
   grid-area: nav;
   display: flex;
@@ -35,7 +33,6 @@ body {
   margin: 20px;
   text-decoration: none;
 }
-
 #navbar nav ul {
   display: flex;
   justify-content: flex-end;
@@ -46,20 +43,16 @@ body {
   font-weight: 700;
   text-align: left;
 }
-
 #navbar nav ul li {
   margin: 20px;
 }
-
 #navbar nav ul li a {
   text-decoration: none;
   color: inherit;
 }
-
 #navbar nav ul li a:hover {
   border-bottom: 1px solid #777777;
 }
-
 #navbar nav ul li .active {
   border-bottom: 1px solid #777777;
 }
@@ -109,72 +102,51 @@ body {
   position: absolute;
 }
 
-/* --------- Ethos --------- */
+/* --------- Club Ethos --------- */
 #club-ethos {
-  height: 600px;
+  display: grid;
+  grid-template: auto/repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-areas: "welcome welcome welcome" "left-about center right-about";
+  grid-gap: 30px;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
-
 #club-ethos #welcome {
+  grid-area: welcome;
   text-align: center;
   margin: 20px 0;
   font-size: 280%;
 }
-
 #club-ethos hr {
   border: 1px solid #777777;
   width: 100%;
   margin: 5px 0;
 }
-
 #club-ethos #left-about {
-  padding-top: 30px;
-  width: 33%;
-  float: left;
+  grid-area: left-about;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-self: end;
 }
-
 #club-ethos #left-about .left-about-heading {
-  width: 50%;
-  float: right;
-  line-height: 20px;
-  clear: both;
-  margin-bottom: 50px;
+  min-width: 290px;
 }
-
-#club-ethos #left-about .left-about-heading h2 {
-  text-align: left;
-}
-
-#club-ethos #left-about .left-about-heading p {
-  text-align: left;
-}
-
 #club-ethos #right-about {
-  padding-top: 30px;
-  width: 33%;
-  float: right;
+  grid-area: right-about;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-self: left;
 }
-
 #club-ethos #right-about .right-about-heading {
-  width: 50%;
-  float: left;
-  line-height: 20px;
-  clear: both;
-  margin-bottom: 50px;
+  min-width: 290px;
 }
-
-#club-ethos #right-about .right-about-heading h2 {
-  text-align: right;
-}
-
-#club-ethos #right-about .right-about-heading p {
-  text-align: right;
-}
-
 #club-ethos #center-about {
-  width: 33%;
-  margin: 0 auto;
+  grid-area: center;
 }
-
 #club-ethos #center-about #circle-container {
   width: 300px;
   height: 300px;
@@ -183,7 +155,6 @@ body {
   border-radius: 50%;
   margin: 0 auto;
 }
-
 #club-ethos #center-about #circle-container #circle-cover-bg {
   background: url("static/img/runner.png") no-repeat center;
   height: 100%;
@@ -200,7 +171,6 @@ body {
   background-size: cover;
   overflow: hidden;
 }
-
 #meeting-times .meeting-card {
   height: 300px;
   color: white;
@@ -208,7 +178,6 @@ body {
   opacity: 0.8;
   text-align: center;
 }
-
 #meeting-times .meeting-card h2 {
   color: white;
 }
@@ -220,19 +189,18 @@ footer {
   background-color: whitesmoke;
   opacity: 0.8;
 }
-
 footer .social-networks {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-
 footer .social-networks li {
   list-style-type: none;
   margin-right: 5%;
 }
-
 footer .social-networks li i {
   font-size: 160%;
   color: #777777;
 }
+
+/*# sourceMappingURL=style.css.map */
