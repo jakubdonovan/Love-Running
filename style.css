@@ -139,6 +139,7 @@ body {
   display: flex;
   max-width: 100%;
   flex-direction: column;
+  align-items: end;
 }
 #club-ethos #left-about .left-about-heading {
   max-width: 280px;
@@ -149,6 +150,7 @@ body {
   display: flex;
   max-width: 100%;
   flex-direction: column;
+  align-items: start;
 }
 #club-ethos #right-about .right-about-heading {
   max-width: 280px;
@@ -185,11 +187,13 @@ body {
     max-width: 50%;
     margin-left: 50%;
     text-align: left;
+    align-items: start;
   }
   #club-ethos #right-about {
     max-width: 50%;
     margin-right: 50%;
     text-align: right;
+    align-items: end;
   }
 }
 /* --------- Meeting Times --------- */
