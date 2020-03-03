@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap");
 body {
+  position: relative;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -7,12 +8,11 @@ body {
   border: 0;
   font-family: Lato;
   color: #777777;
-  position: relative;
 }
 
 #layout {
+  min-height: 100%;
   padding-bottom: 50px;
-  height: 100%;
 }
 
 /* --------- Navbar --------- */
@@ -20,11 +20,12 @@ body {
   display: grid;
   grid-template: 60px/300px 1fr;
   grid-template-areas: "logo nav";
-  background-color: whitesmoke;
+  color: white;
+  background-color: #323232;
 }
 #navbar #navbar-logo {
   grid-area: logo;
-  color: #525252;
+  color: white;
   font-family: Oswald;
   font-size: 35px;
   text-transform: uppercase;
@@ -59,10 +60,10 @@ body {
   color: inherit;
 }
 #navbar nav ul li a:hover {
-  border-bottom: 1px solid #777777;
+  border-bottom: 2px solid #777777;
 }
 #navbar nav ul li .active {
-  border-bottom: 1px solid #777777;
+  border-bottom: 2px solid #777777;
 }
 
 /* --------- Hero --------- */
@@ -218,8 +219,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: whitesmoke;
-  opacity: 0.8;
+  background-color: #323232;
 }
 footer .social-networks {
   display: flex;
@@ -232,14 +232,14 @@ footer .social-networks li {
 }
 footer .social-networks li i {
   font-size: 160%;
-  color: #777777;
+  color: white;
 }
 
 /* --------- Meeting Times --------- */
 #content {
   padding: 20px;
   margin: 10px;
-  height: 100%;
+  height: 87.4vh;
 }
 
 #gallery {
