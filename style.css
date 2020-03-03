@@ -132,43 +132,42 @@ body {
 }
 #club-ethos #left-about {
   grid-area: left-about;
-  width: 60%;
+  width: 75%;
   display: flex;
   flex-direction: column;
-  text-align: left;
   justify-self: end;
 }
 #club-ethos #left-about .left-about-heading {
-  min-width: 290px;
+  max-width: 280px;
+  text-align: left;
 }
 #club-ethos #right-about {
   grid-area: right-about;
-  width: 60%;
+  width: 75%;
   display: flex;
   flex-direction: column;
-  text-align: right;
   justify-self: start;
 }
 #club-ethos #right-about .right-about-heading {
-  min-width: 290px;
+  max-width: 280px;
+  text-align: right;
 }
 #club-ethos #center-about {
   grid-area: center;
+  margin: 0 auto;
 }
 #club-ethos #center-about #circle-container {
-  width: 300px;
-  height: 300px;
-  padding: 30px;
+  width: 350px;
+  height: 350px;
   border: 1px solid lightgrey;
   border-radius: 50%;
-  margin: 0 auto;
 }
 #club-ethos #center-about #circle-container #circle-cover-bg {
   background: url("static/img/runner.png") no-repeat center;
   height: 100%;
   border-radius: 50%;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1339px) {
   #club-ethos {
     grid-template: auto/1fr;
     grid-template-areas: "welcome" "left-about" "center" "right-about";
@@ -178,16 +177,24 @@ body {
   }
   #club-ethos #left-about {
     justify-self: center;
-    width: 70%;
+    align-items: center;
   }
-  #club-ethos #left-about h2 {
+  #club-ethos #left-about .left-about-heading {
+    max-width: 80%;
+    text-align: center;
+  }
+  #club-ethos #left-about .left-about-heading h2 {
     text-align: center;
   }
   #club-ethos #right-about {
     justify-self: center;
-    width: 70%;
+    align-items: center;
   }
-  #club-ethos #right-about h2 {
+  #club-ethos #right-about .right-about-heading {
+    max-width: 80%;
+    text-align: center;
+  }
+  #club-ethos #right-about .right-about-heading h2 {
     text-align: center;
   }
 }

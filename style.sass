@@ -120,7 +120,6 @@ body
     padding-bottom: 50px
 
 
-
     #welcome
         grid-area: welcome
         text-align: center
@@ -135,65 +134,73 @@ body
 
     #left-about
         grid-area: left-about
-        width: 60%
+        width: 75%
         display: flex
         flex-direction: column
-        text-align: left
         justify-self: end
 
         .left-about-heading
-            min-width: 290px
+            max-width: 280px
+            text-align: left
 
 
     #right-about
         grid-area: right-about
-        width: 60%
+        width: 75%
         display: flex
         flex-direction: column
-        text-align: right
         justify-self: start
 
         .right-about-heading
-            min-width: 290px
+            max-width: 280px
+            text-align: right
 
 
     #center-about
         grid-area: center
+        margin: 0 auto
 
         #circle-container
-            width: 300px
-            height: 300px
-            padding: 30px
+            width: 350px
+            height: 350px
             border: 1px solid lightgrey
             border-radius: 50%
-            margin: 0 auto
 
             #circle-cover-bg
                 background: url("static/img/runner.png") no-repeat center
                 height: 100%
                 border-radius: 50%
 
-    
-    @media only screen and (max-width: 1000px)
+
+    @media only screen and (max-width: 1339px)
         grid-template: auto / 1fr
         grid-template-areas: "welcome" "left-about" "center" "right-about"
+
 
         #welcome
             font-size: 2rem
 
         #left-about
             justify-self: center
-            width: 70%
+            align-items: center
 
-            h2
+            .left-about-heading
+                max-width: 80%
                 text-align: center
+
+                h2
+                    text-align: center
 
         #right-about
             justify-self: center
-            width: 70%
+            align-items: center
 
-            h2
+            .right-about-heading
+                max-width: 80%
                 text-align: center
+
+                h2
+                    text-align: center
 
 
 
