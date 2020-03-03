@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap");
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   border: 0;
   font-family: Lato;
   color: #777777;
+  position: relative;
+}
+
+#layout {
+  padding-bottom: 50px;
 }
 
 /* --------- Navbar --------- */
@@ -104,14 +109,13 @@ body {
   position: absolute;
 }
 
-/* --------- Meeting Times --------- */
+/* --------- Club Ethos --------- */
 #club-ethos {
   display: grid;
   grid-template: auto/repeat(auto-fit, minmax(320px, 1fr));
   grid-template-areas: "welcome welcome welcome" "left-about center right-about";
   grid-gap: 30px;
   padding-bottom: 50px;
-  overflow: hidden;
 }
 #club-ethos #welcome {
   grid-area: welcome;
@@ -211,8 +215,8 @@ footer {
   display: grid;
   grid-template: 50px/1fr;
   position: absolute;
-  width: 100%;
   bottom: 0;
+  width: 100%;
   background-color: whitesmoke;
   opacity: 0.8;
 }
@@ -234,6 +238,7 @@ footer .social-networks li i {
 #content {
   padding: 20px;
   margin: 10px;
+  height: 100%;
 }
 
 #gallery {
