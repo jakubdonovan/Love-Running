@@ -22,6 +22,7 @@ body {
   grid-template-areas: "logo nav";
   color: white;
   background-color: #323232;
+  max-width: 100%;
 }
 #navbar #navbar-logo {
   grid-area: logo;
@@ -145,8 +146,8 @@ body {
 }
 #club-ethos #right-about {
   grid-area: right-about;
-  width: 75%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-self: start;
 }
@@ -169,30 +170,36 @@ body {
   height: 100%;
   border-radius: 50%;
 }
+
 @media only screen and (max-width: 1393px) {
   #club-ethos {
     width: 75%;
     margin: 0 auto;
     grid-template: auto/1fr;
-    grid-template-areas: "welcome" "left-about" "center" "right-about";
+    grid-template-areas: "welcome" "left-about" "right-about" "center";
+    grid-gap: 20px;
   }
   #club-ethos #welcome {
     font-size: 2.3rem;
   }
-  #club-ethos #left-about, #club-ethos #right-about {
-    justify-self: center;
-    align-items: center;
+  #club-ethos #left-about {
+    max-width: 50%;
+    align-items: start;
+    text-align: left;
   }
-  #club-ethos #left-about .left-about-heading, #club-ethos #left-about .right-about-heading, #club-ethos #right-about .left-about-heading, #club-ethos #right-about .right-about-heading {
-    max-width: 100%;
-    text-align: center;
+  #club-ethos #left-about #left-about-heading {
+    width: 100%;
+  }
+  #club-ethos #right-about {
+    max-width: 50%;
+    align-items: end;
+    text-align: right;
   }
 }
-
 /* --------- Meeting Times --------- */
 #meeting-times {
   display: grid;
-  grid-template: auto/repeat(auto-fit, minmax(200px, 1fr));
+  grid-template: auto/repeat(auto-fit, minmax(170px, 1fr));
   grid-gap: 10px;
   background: url("static/img/dublin-city.png") no-repeat center;
   background-size: cover;
