@@ -114,9 +114,11 @@ body
 /* --------- Club Ethos --------- */
 #club-ethos
     display: grid
-    grid-template: auto / repeat(auto-fit, minmax(320px, 1fr))
+    grid-template: auto / repeat(auto-fit, minmax(280px, 1fr))
     grid-template-areas: "welcome welcome welcome" "left-about center right-about"
     grid-gap: 30px
+    width: 80%
+    margin: 0 auto
     padding-bottom: 50px
 
 
@@ -134,10 +136,11 @@ body
 
     #left-about
         grid-area: left-about
-        width: 75%
         display: flex
+        max-width: 100%
         flex-direction: column
         justify-self: end
+        
 
         .left-about-heading
             max-width: 280px
@@ -173,36 +176,23 @@ body
 
 
     @media only screen and (max-width: 1393px)
-        width: 70%
+        width: 75%
         margin: 0 auto
         grid-template: auto / 1fr
         grid-template-areas: "welcome" "left-about" "center" "right-about"
 
 
         #welcome
-            font-size: 2rem
+            font-size: 2.3rem
 
-        #left-about
+        #left-about, #right-about
             justify-self: center
             align-items: center
 
-            .left-about-heading
+            .left-about-heading, .right-about-heading
                 max-width: 100%
                 text-align: center
 
-                h2
-                    text-align: center
-
-        #right-about
-            justify-self: center
-            align-items: center
-
-            .right-about-heading
-                max-width: 100%
-                text-align: center
-
-                h2
-                    text-align: center
 
 
 
