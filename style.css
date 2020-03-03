@@ -136,9 +136,9 @@ body {
 #club-ethos #left-about {
   grid-area: left-about;
   display: flex;
-  max-width: 100%;
+  width: 100%;
   flex-direction: column;
-  justify-self: end;
+  align-items: end;
 }
 #club-ethos #left-about .left-about-heading {
   max-width: 280px;
@@ -149,7 +149,7 @@ body {
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-self: start;
+  align-items: start;
 }
 #club-ethos #right-about .right-about-heading {
   max-width: 280px;
@@ -173,7 +173,7 @@ body {
 
 @media only screen and (max-width: 1393px) {
   #club-ethos {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     grid-template: auto/1fr;
     grid-template-areas: "welcome" "left-about" "right-about" "center";
@@ -184,7 +184,7 @@ body {
   }
   #club-ethos #left-about {
     max-width: 50%;
-    align-items: start;
+    align-items: left;
     text-align: left;
   }
   #club-ethos #left-about #left-about-heading {
