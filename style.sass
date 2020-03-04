@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap')
-* 
-    border: 1px solid red
 
 body
     width: 100%
@@ -45,13 +43,11 @@ body
 
         ul
             display: flex
-            justify-content: flex-end
             list-style-type: none
             letter-spacing: 4px
             font-family: Oswald
             font-size: 1rem
             font-weight: 700
-            text-align: left
 
             li
                 margin: 20px
@@ -65,6 +61,23 @@ body
 
                 .active
                     border-bottom: 2px solid #777777
+
+
+@media only screen and (max-width: 720px)
+    #navbar
+        grid-template: 60px / 1fr
+        grid-template-areas: "logo" "nav"
+        justify-items: center
+
+        nav
+            padding: 0
+            margin: 0
+
+            ul
+                padding: 0
+                margin: 0
+
+
 
 
 /* --------- Hero --------- */
@@ -119,7 +132,7 @@ body
     grid-template: auto / 330px 350px 330px
     grid-template-areas: "welcome welcome welcome" "left-about center right-about"
     grid-gap: 30px
-    width: 80%
+    width: 90%
     margin: 0 auto
     justify-content: center
     padding-bottom: 50px
@@ -187,6 +200,9 @@ body
 
         #welcome
             font-size: 2.3rem
+
+        hr
+            display: none
 
         #left-about
             max-width: 50%
