@@ -4,7 +4,6 @@ body
     width: 100%
     margin: 0
     padding: 0
-    border: 0
     font-family: Lato
     color: #777777
 
@@ -126,6 +125,12 @@ body
     position: absolute
 
 
+@media only screen and (max-width: 720px)
+    #cover-text
+        left: 0px
+
+
+
 /* --------- Club Ethos --------- */
 #club-ethos
     display: grid
@@ -155,7 +160,7 @@ body
         display: flex
         flex-direction: column
         width: 100%
-        align-items: end
+        align-items: flex-end
 
         .left-about-heading
             max-width: 280px
@@ -166,7 +171,7 @@ body
         display: flex
         flex-direction: column
         width: 100%
-        align-items: start
+        align-items: flex-start
 
         .right-about-heading
             max-width: 280px
@@ -208,16 +213,13 @@ body
             max-width: 50%
             margin-left: 50%
             text-align: left
-            align-items: start
+            align-items: flex-start
 
         #right-about
             max-width: 50%
             margin-right: 50%
             text-align: right
-            align-items: end
-
-
-    
+            align-items: flex-end
 
 /* --------- Meeting Times --------- */
 #meeting-times
@@ -269,69 +271,60 @@ footer
     
 // GALLERY.html
 /* --------- Meeting Times --------- */
-#content
-    padding: 20px
-    margin: 10px
-    height: 87.4vh
+#wrapper
+    width: auto
+    margin: 40px 0
+
 
 #gallery
-    display: grid
-    grid-template-columns: repeat(10, 1fr)
-    grid-auto-rows: repeat(10, 1fr)
-    grid-gap: 5px
-    background-color: whitesmoke
-
-    .gallery-item
-        background-size: cover
-        width: 100%
-        height: 100%
-
-    .gallery-item:hover
-        transform: scale(1.04) 
-        transition: 1s
-        border: 3px solid gold
-        border-radius: 1%
-
-    .one
-        grid-area: 1/1/2/4
-
-    .two
-        grid-area: 1/8/3/11
-
-    .three
-        grid-area: 3/9/5/11
-
-    .four
-        grid-area: 2/1/5/4
-
-    .five
-        grid-area: 3/4/5/8
-    
-    .six
-        grid-area: 3/8/4/9
-
-    .seven
-        grid-area: 1/4/3/8
-
-    .eight
-        grid-area: 4/8/5/9
-
-    
-#container-flexbox 
     display: flex
-    height: 400px
-    width: 600px
-    background-color: whitesmoke
-    border: 4px solid red
-    flex-direction: column
-    align-items: end
-    margin: 0 auto
+    justify-content: center
+    flex-wrap: wrap
+    flex-direction: row
+
+    .gallety-item
 
 
-    .box
-        height: 100px
-        width: 100px
-        border: 2px solid brown
-        background-color: brown
-        margin: 10px
+
+// #gallery
+//     display: grid
+//     grid-template-columns: repeat(10, 1fr)
+//     grid-auto-rows: repeat(10, 1fr)
+//     grid-gap: 5px
+//     background-color: whitesmoke
+
+//     .gallery-item
+//         background-size: cover
+//         width: 100%
+//         height: 100%
+
+//     .gallery-item:hover
+//         transform: scale(1.04) 
+//         transition: 1s
+//         border: 3px solid gold
+//         border-radius: 1%
+
+//     .one
+//         grid-area: 1/1/2/4
+
+//     .two
+//         grid-area: 1/8/3/11
+
+//     .three
+//         grid-area: 3/9/5/11
+
+//     .four
+//         grid-area: 2/1/5/4
+
+//     .five
+//         grid-area: 3/4/5/8
+    
+//     .six
+//         grid-area: 3/8/4/9
+
+//     .seven
+//         grid-area: 1/4/3/8
+
+//     .eight
+//         grid-area: 4/8/5/9
 
