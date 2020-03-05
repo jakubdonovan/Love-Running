@@ -11,7 +11,6 @@ body {
 #layout {
   position: relative;
   min-height: 100vh;
-  padding-bottom: 50px;
 }
 
 /* --------- Navbar --------- */
@@ -271,6 +270,13 @@ footer .social-networks li i {
   flex-wrap: wrap;
   flex-direction: row;
 }
+#gallery .gallery-item:hover {
+  transform: scale(1.04);
+  transition: 1s;
+  border: 3px solid gold;
+  border-radius: 1%;
+}
+
 /* --------- Sign Up --------- */
 #form-section {
   background: url("static/img/formbg.jpg") no-repeat center;
